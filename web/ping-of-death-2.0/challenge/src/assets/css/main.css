@@ -1,0 +1,95 @@
+h1, h2, h3, h4, h5, h6, p {
+  color: #08fa00;
+}
+
+input {
+  font-family: Consolas, monaco, monospace;
+  color: #08fa00;
+  background: rgb(38,38,38);
+}
+
+input[type=text] {
+  width: 30%;
+}
+
+h1 {
+  font-family: Consolas, monaco, monospace;
+  font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  line-height: 26.4px;
+}
+
+h3 {
+  font-family: Consolas, monaco, monospace;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  line-height: 15.4px;
+}
+
+p {
+  font-family: Consolas, monaco, monospace;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+blockquote {
+  font-family: Consolas, monaco, monospace;
+  font-size: 21px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+pre {
+  font-family: Consolas, monaco, monospace;
+  font-size: 13px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 18.5667px;
+}
+
+.sCrIpTsK1d {
+  animation:owow 0.5s infinite;
+}
+
+@keyframes owow {
+  0%  { color: #00ff15; }
+  25% { color: #00ffea; }
+  50% { color: #fb00ff; }
+  75% { color: #ff0000; }
+  100%  { color: #00ff15; }
+}
+
+#particles-js {
+    background-color: #0f0f15;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    z-index: -1;
+}
+
+#content {
+  position:relative;
+  top: 5%;
+  width: 90%;
+  height: 85%;
+  bottom: 5%;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border-radius: 25px;
+  background: rgba(5,5,5,0.5);
+  display: none;
+}

@@ -1,0 +1,87 @@
+h1, h2, h3, h4, h5, h6, p, input {
+    font-family: 'Bungee', regular;
+}
+
+h1 {
+    font-size:42px;
+}
+
+input {
+    width: 30%;
+}
+
+.button {
+    width: 15%;
+}
+
+#submit {
+    padding: 5px;
+}
+
+#content {
+    position:relative;
+    top: 5%;
+    width: 69%;
+    height: 40%;
+    bottom: 5%;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-radius: 25px;
+    background: #e0e0e000;
+    display: none;
+  }
+
+#slideshow { 
+    margin: 20px auto; 
+    position: relative;
+    top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%; 
+    height: 400px; 
+    padding: 2px; 
+    text-align: center;
+    border-radius: 25px;
+    /* background: #acababa2; */
+    display: none;
+}
+  
+#slideshow > div { 
+    top: 5px; 
+
+    right: 5px; 
+    bottom: 5px;
+    max-height: 90%;
+    max-width: 100%;
+    position: absolute;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+#particles-franku {
+    background: lightskyblue;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    z-index: -2;
+}
+
+#slideshow-img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.particles {
+    background: transparent;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    z-index: -1;
+}

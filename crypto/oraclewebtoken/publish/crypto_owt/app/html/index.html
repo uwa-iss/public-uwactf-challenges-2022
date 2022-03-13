@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>OWT Standard</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="/css/main.css" />
+        <link rel="stylesheet" href="/css/desert.css" />
+    </head>
+
+    <body>
+        <section>
+            <div id="grid-item">
+                <h1>Oracle Web Token</h1>
+            </div>
+            <div id="grid-item">
+                <img src="/images/logo.jpeg" />
+            </div>
+            <div id="grid-item">
+                <h3>Introducing a new secure method of sharing sensitive data between two parties!</h3>
+            </div>
+            <div id="grid-item">
+                <p>Oracle Web Token (OWT) uses builtin in military grade encryption for sharing sensitive data that the recipient cannot read.</p>
+            </div>
+            <div id="grid-item">
+                <p>To start using OWT, simply download the OWT python module from <a href="/src/owt.py">here</a>, install <code>pycryptodome</code> and import it in your projects!</p>
+            </div>
+            <div id="grid-item">
+                <p>To verify our claim that OWT is secure, this demo API returns a OWT token with a hidden flag in the following format. If you can find a way to view the flag we will give you a big prize!</p>
+            </div>
+            <div id="grid-item" class="api-call">
+                <pre class="prettyprint" class="api-call">
+                    <code id="json">
+{
+    "flag" : "FAKE{the_API_stores_the_actual_flag}"
+}</code>
+                </pre>
+            </div>
+            <hr>
+            <div id="grid-item" class="api-call">
+                <h2><code>GET <a href="/api/token/create">/api/token/create</a></code></h2>
+                <p>Returns a OWT token with the hidden flag.</p>
+                <p><b>Example Response</b></p>
+                <pre class="prettyprint">
+                    <code id="json">
+{
+    "status":"success",
+    "value":{
+        "token":"eyJpdiI6ICJBRnloZVVKc05hdHY3U1FPTzMwN3hBIn0.4ISVfG3FcOOAi-0aTn7tv7UFIkdV0WLcyAGoLoEC5p6oYbO7WJpNfV53GJii_v6yAeUWlQkv0TDzg2Wd0cx6kQ"
+    }
+}</code>
+                </pre>
+            </div>
+            <hr>
+            <div id="grid-item" class="api-call">
+                <h2><code>POST <a href="/api/token/verify">/api/token/verify</a></code></h2>
+                <p>Verifies the OWT token is a valid. If it is not valid then the API will inform you of the reason why.</p>
+                <p><b>Example JSON POST Body</b></p>
+                <pre class="prettyprint">
+                    <code id="json">
+{
+    "token":"eyJpdiI6ICJBRnloZVVKc05hdHY3U1FPTzMwN3hBIn0.4ISVfG3FcOOAi-0aTn7tv7UFIkdV0WLcyAGoLoEC5p6oYbO7WJpNfV53GJii_v6yAeUWlQkv0TDzg2Wd0cx6kQ"
+}</code>
+                </pre>
+                <p><b>Example Response</b></p>
+                <pre class="prettyprint">
+                    <code id="json">
+{
+    "status":"success",
+    "value":"Token is a valid OWT token!"
+}</code>
+                </pre>
+            </div>
+        </section>
+
+
+        <div id="parrot-bg"></div>
+
+        <script src="/js/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+        <script src="/js/main.js"></script>
+    </body>
+</html>

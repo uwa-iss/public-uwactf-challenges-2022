@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Poly's Website</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/css/main.css" />
+        <link rel="stylesheet" href="/css/jquery.notifyBar.css">
+    </head>
+
+    <body>
+        <section>
+            <div id="grid-item">
+                <h1 style="color: rgb(21, 255, 0);">Poly Wants a JPEG</h1>
+            </div>
+            <div id="grid-item">
+                <h3 style="color: rgb(0, 255, 255);">My pet parrot called Poly wants to see your best JPEGs!</h3>
+            </div>
+            <div id="grid-item">
+                <img src="/images/background/parrot1.gif" />
+            </div>
+            <div id="grid-item">
+                <h4 style="color: rgb(235, 0, 235);">Send Poly your beautiful JPEGs!</h4>
+            </div>
+            <div id="grid-item">
+                <input type="text" id="name" class="hollow" placeholder="Your Name">
+            </div>
+            <form id="upload">
+                <div id="grid-item">
+                    <label id="file">
+                        <input type="file" id="hide" accept="image/jpeg">
+                        Upload Your JPEG
+                    </label>
+                </div>
+            </form>
+            </div>
+            <div id="grid-item">
+                <input type="submit" id="submit" class="filled" value="Submit">
+            </div>
+        </section>
+
+
+        <div id="parrot-bg"></div>
+
+        <script src="/js/jquery-3.6.0.min.js"></script>
+        <script src="/js/jquery.notifyBar.js"></script>
+        <script src="/js/main.js"></script>
+        <script src="/js/jpeg-upload.js"></script>
+    </body>
+</html>

@@ -1,0 +1,5 @@
+flask
+selenium
+gunicorn
+Pillow
+bcrypt
